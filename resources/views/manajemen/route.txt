@@ -1,0 +1,8 @@
+
+// User Manajemen
+Route::get('/user-manajemen', [App\Http\Controllers\ManajemenController::class, 'index'])->name('user-manajemen');
+Route::patch('/user-manajemen/{user}', [App\Http\Controllers\ManajemenController::class, 'update'])->name('update-user-manajemen');
+Route::post('/user-manajemen', [App\Http\Controllers\ManajemenController::class, 'store'])->name('user-manajemen');
+Route::delete('/user-manajemen/{user}', [App\Http\Controllers\ManajemenController::class, 'destroy'])->name('destroy-user-manajemen');
+Route::get('/user-manajemen/{user}/edit', [App\Http\Controllers\ManajemenController::class, 'edit'])->name('edit-user-manajemen');
+Route::get('/user-manajemen/create', [App\Http\Controllers\ManajemenController::class, 'create'])->name('user-manajemen-create');
